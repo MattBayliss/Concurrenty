@@ -107,7 +107,7 @@ namespace Concurrenty
                         if (!allocatedToTask && !ct.IsCancellationRequested)
                         {
                             Console.WriteLine("WAITING FOR A FREE TASK...");
-                            // all tasks are busy, need to wait for one to become available (ignoring last task, the delay)
+                            // all tasks are busy, need to wait for one to become available
                             await Task.WhenAny(tasks);
                         }
                     }
